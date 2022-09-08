@@ -35,7 +35,7 @@ public class PlayerControllerX : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(transform.position.y > 5)
+        if(transform.position.y > 8)
         {
             jumpLevel = false;
         }
