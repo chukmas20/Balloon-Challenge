@@ -16,6 +16,7 @@ public class PlayerControllerX : MonoBehaviour
     private AudioSource playerAudio;
     public AudioClip moneySound;
     public AudioClip explodeSound;
+    public AudioClip boing;
     public bool jumpLevel;
 
 
@@ -72,6 +73,7 @@ public class PlayerControllerX : MonoBehaviour
         }else if (other.gameObject.CompareTag("Ground") && !gameOver)
         {
             playerRb.AddForce(Vector3.up * 10, ForceMode.Impulse);
+            playerAudio.PlayOneShot(boing, 1.5f);
         }
 
     }
